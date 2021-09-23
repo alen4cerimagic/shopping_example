@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         println("This is a new commit change!")
-        shit happens
+
+        asdasdasd
     }
 }

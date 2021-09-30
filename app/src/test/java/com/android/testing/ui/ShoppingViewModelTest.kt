@@ -41,7 +41,7 @@ class ShoppingViewModelTest {
     fun `insert shopping item with too long names, returns error`() {
         val string = buildString {
            for (i in 1..Constants.MAX_NAME_LENGTH + 1)
-               append(1)
+               append("-")
         }
         viewModel.insertShoppingItem(string, "5", "3.0")
 

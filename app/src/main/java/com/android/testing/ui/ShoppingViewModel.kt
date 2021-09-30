@@ -67,7 +67,7 @@ class ShoppingViewModel @Inject constructor(
         val amount = try {
             amountString.toInt()
         } catch (e: Exception) {
-            _insertShoppingItemStatus.postValue(Event(Resource.error("Please enter a valiid amount.", null)))
+            _insertShoppingItemStatus.postValue(Event(Resource.error("Please enter a valid amount.", null)))
             return
         }
 

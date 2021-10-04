@@ -5,7 +5,7 @@ import com.android.testing.MainCoroutineRule
 import com.android.testing.getOrAwaitValueTest
 import com.android.testing.other.Constants
 import com.android.testing.other.Status
-import com.android.testing.repositories.FakeShoppingRepository
+import com.android.testing.repositories.FakeShoppingRepositoryAndroidTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
@@ -25,7 +25,7 @@ class ShoppingViewModelTest {
 
     @Before
     fun setup() {
-        viewModel = ShoppingViewModel(FakeShoppingRepository())
+        viewModel = ShoppingViewModel(FakeShoppingRepositoryAndroidTest())
     }
 
     @Test

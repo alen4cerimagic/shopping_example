@@ -36,9 +36,8 @@ class DefaultShoppingRepository @Inject constructor(
                 response.body()?.let {
                     return@let Resource.success(it)
                 } ?: Resource.error("An unknown error occurred.", null)
-            }
-
-            Resource.error("An unknown error occurred.", null)
+            } else
+                Resource.error("An unknown error occurred.", null)
         } catch (e: Exception) {
             return Resource.error("Couldn't reach the server.", null)
         }
